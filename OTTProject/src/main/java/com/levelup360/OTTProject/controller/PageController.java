@@ -15,6 +15,11 @@ public class PageController {
         return "home";
     }
 
+    @RequestMapping("/ott/sent")
+    public String ottSentSuccessMessage() {
+        return "ott-sent";
+    }
+
     @RequestMapping("/dashboard")
     public String dashboard(Principal principal, Model model) {
         model.addAttribute("user", principal.getName());
